@@ -15,21 +15,30 @@ console.log(cost);
 // #3
  var GBP = items.filter(function(dook){
    return dook.currency_code === "GBP";
+ }).forEach(function(item){
+   console.log(item.title + ' costs £' + item.price);
  });
- console.log(GBP[0].title + ' costs £' + GBP[0].price);
+
 
  // #4
- var wood = items.filter(function(ugh){
- return ugh.materials.indexOf ('wood') != -1;
+var wood = items.filter(function(ugh) {
+  return ugh.materials.indexOf('wood') != -1;
+}).forEach(function(item){
+  console.log(item.title);
+
 });
-console.log(wood);
 
 // #5
 var eight = items.filter(function(lolno){
   return lolno.materials.length > 7;
-})
+}).forEach(function(item){
+  console.log(item.title);
+  console.log(item.materials);
 
-console.log(eight);
+
+});
+
+
 
 // #6
 var made = items.filter(function(sigh){
